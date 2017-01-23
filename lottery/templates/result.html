@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中奖人员名单</title>
+</head>
+<body>
+<div align="center"><span style="font-size: 50px">中奖人员名单</span></div>
+<div style="padding-top: 50px;">
+<table border="1" align="center" width=80% >
+    <tr>
+<th rowspan="2" scope="row"><h1 align="center" style="color: red">五等奖</h1></th>
+
+{% if rst_5_1 %}
+    {% for obj_5_1 in rst_5_1 %}
+        <td><span style="font-size: 35px">{{ obj_5_1.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+    <tr>
+
+{% if rst_5_2 %}
+    {% for obj_5_2 in rst_5_2 %}
+        <td><span style="font-size: 35px">{{ obj_5_2.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">四等奖</h1></th>
+    {% if rst_4 %}
+    {% for obj_4 in rst_4 %}
+        <td><span style="font-size: 35px">{{ obj_4.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">三等奖</h1></th>
+    {% if rst_3 %}
+    {% for obj_3 in rst_3 %}
+        <td><span style="font-size: 35px">{{ obj_3.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">二等奖</h1></th>
+    {% if rst_2 %}
+    {% for obj_2 in rst_2 %}
+        <td><span style="font-size: 35px">{{ obj_2.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">一等奖</h1></th>
+    {% if rst_1 %}
+    {% for obj_1 in rst_1 %}
+        <td><span style="font-size: 35px">{{ obj_1.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">特等奖</h1></th>
+    {% if rst_t %}
+    {% for obj_t in rst_t %}
+        <td><span style="font-size: 35px">{{ obj_t.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+<tr>
+    <th scope="row"><h1 align="center" style="color: red">加奖</h1></th>
+    {% if rst_j %}
+    {% for obj_j in rst_j %}
+        <td><span style="font-size: 35px">{{ obj_j.name }}</span></td>
+    {% endfor %}
+{%  endif %}
+</tr>
+</table>
+</div>
+</body>
+</html>
